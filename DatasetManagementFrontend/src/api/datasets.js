@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://192.168.158.43:8082/datasets";
+// 使用 /api 作為前綴，讓 Vite 的 proxy 處理轉發
+const API_BASE_URL = "/api/datasets";
+
+// const API_BASE_URL = "http://192.168.158.43:8082/datasets";
 
 // 分類相關 API
 export const fetchCategories = () => axios.get(`${API_BASE_URL}/categories`);
